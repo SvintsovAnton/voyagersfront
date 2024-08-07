@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "store/hooks"
 import { profile, selectIsAuthenticated } from "store/redux/auth/authSlice"
 import { useEffect, useState } from "react"
@@ -32,7 +32,7 @@ export default function App() {
     setSidebarOpen(isOpen => !isOpen)
   }
   return (
-    <BrowserRouter>
+    <HashRouter>
       {user &&
         (sidebarOpen ? (
           <Sidebar isOpen={sidebarOpen} onCloseSidebar={handleCloseSidebar} />
@@ -60,6 +60,6 @@ export default function App() {
         <Route path="/auth/login/setnewpassword" element={<SetNewPassword />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
