@@ -37,7 +37,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {user &&
         (sidebarOpen ? (
           <Sidebar isOpen={sidebarOpen} onCloseSidebar={handleCloseSidebar} />
@@ -66,6 +66,6 @@ export default function App() {
         <Route path="/auth/login/setnewpassword" element={<SetNewPassword />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
