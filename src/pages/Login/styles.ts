@@ -1,6 +1,17 @@
 import styled from "@emotion/styled"
 import { colors } from "styles/colors"
 import { FormBackground } from "assets"
+import {Link} from "react-router-dom"
+
+export const Styledlink = styled(Link)`
+  font-family: "Montserrat";
+  color: ${colors.secondaryGrey};
+  text-decoration: none; 
+  &:hover {
+    color: ${colors.secondaryGrey}; 
+  }
+`;
+
 
 export const LoginPageWrapper = styled.div`
   display: flex;
@@ -44,15 +55,16 @@ export const DontHaveAnAccount = styled.p`
   color: ${colors.secondaryGrey};
 `
 
-export const Signup = styled.a`
+export const SignupLink = styled(Link)`
   font-family: "Montserrat";
   color: ${colors.secondaryGrey};
 `
 
-export const ForgotPassword = styled.a`
+export const ForgotPasswordLink = styled(Link)`
   font-weight: 800;
   font-family: "Montserrat";
   margin: 20px;
   font-size: 14px;
   color: ${colors.secondaryGrey};
 `
+

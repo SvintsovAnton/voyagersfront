@@ -9,7 +9,7 @@ import {
   ChangePasswordForm,
   ChangePasswordHeader,
   DontHaveAnAccount,
-  Signup,
+  SignupLink,
   ButtonContainer,
   ModalOverlay,
   ModalContent,
@@ -43,7 +43,7 @@ export default function ChangePassword() {
           <ChangePasswordHeader>Change Password</ChangePasswordHeader>
           <DontHaveAnAccount>
             Don't have an account?{" "}
-            <Signup href="/users/register">Signup</Signup>
+            <SignupLink to="/users/register">Signup</SignupLink>
           </DontHaveAnAccount>
           <Input
             id="email"

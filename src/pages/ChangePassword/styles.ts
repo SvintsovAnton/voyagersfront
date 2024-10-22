@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 import { colors } from "styles/colors"
+import { FormBackground } from "assets"
+import {Link} from "react-router-dom";
 
 export const ChangePasswordPageWrapper = styled.div`
   display: flex;
@@ -16,6 +18,10 @@ export const ChangePasswordFormWrapper = styled.div`
   height: 70vh;
   border-radius: 50px;
   background-color: ${colors.primaryGrey};
+  background-image: url(${FormBackground});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `
 
 export const ChangePasswordForm = styled.form`
@@ -40,7 +46,7 @@ export const DontHaveAnAccount = styled.p`
   color: ${colors.secondaryGrey};
 `
 
-export const Signup = styled.a`
+export const SignupLink = styled(Link)`
   font-family: "Montserrat";
   color: ${colors.secondaryGrey};
 `

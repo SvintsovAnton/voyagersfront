@@ -21,6 +21,7 @@ import {
   ChangePassword,
   SetNewPassword,
   PageNotFound,
+  PrivacePolice
 } from "pages/index"
 export default function App() {
   const isAuthorized = useAppSelector(selectIsAuthorized)
@@ -60,7 +61,7 @@ export default function App() {
         <Route path="/events" element={<CreateEvent />} />
         <Route path="/users/register" element={<Signup />} />
         <Route path="/info/termsofuse" element="Terms Of Use" />
-        <Route path="/info/privacypolicy" element="Privacy Policy" />
+        <Route path="/info/privacypolicy" element={<PrivacePolice />} />
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/login/changepassword" element={<ChangePassword />} />
         <Route path="/auth/login/setnewpassword" element={<SetNewPassword />} />
