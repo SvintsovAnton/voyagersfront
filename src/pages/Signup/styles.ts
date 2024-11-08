@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import { colors } from "styles/colors"
 import { FormBackground } from "assets"
+import {Link} from "react-router-dom";
 
 export const SignupPageWrapper = styled.div`
   display: flex;
@@ -76,7 +77,7 @@ export const TermsOfUse = styled.a`
   color: ${colors.secondaryGrey};
 `
 
-export const PrivacyPolicy = styled.a`
+export const PrivacyPolicy = styled(Link)`
   font-family: "Montserrat";
   color: ${colors.secondaryGrey};
 `

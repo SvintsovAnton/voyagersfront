@@ -2,7 +2,7 @@ import { useFormik } from "formik"
 import * as Yup from "yup"
 import { useAppDispatch } from "store/hooks"
 import { login } from "store/redux/auth/authSlice"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link} from "react-router-dom"
 import { FormRightSideTemplate, Button, Input } from "components/index"
 import {
   LoginPageWrapper,
@@ -10,8 +10,8 @@ import {
   LoginForm,
   LoginHeader,
   DontHaveAnAccount,
-  Signup,
-  ForgotPassword,
+  SignupLink,
+  ForgotPasswordLink,
 } from "./styles"
 export default function Login() {
   const schema = Yup.object().shape({
@@ -47,7 +47,7 @@ export default function Login() {
           <LoginHeader>Log in</LoginHeader>
           <DontHaveAnAccount>
             Don't have an account?{" "}
-            <Signup href="/users/register">Signup</Signup>
+            <SignupLink to="/users/register">Signup</SignupLink>
           </DontHaveAnAccount>
           <Input
             id="email"
@@ -67,9 +67,9 @@ export default function Login() {
             onChange={formik.handleChange}
             error={formik.errors.password}
           />
-          <ForgotPassword href="/auth/login/changepassword">
+          <ForgotPasswordLink to="/auth/login/changepassword">
             forgot password?
-          </ForgotPassword>
+            </ForgotPasswordLink>
           <Button name="LOG IN" type="submit" />
         </LoginForm>
         <FormRightSideTemplate />

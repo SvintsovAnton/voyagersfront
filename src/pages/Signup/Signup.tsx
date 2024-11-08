@@ -4,7 +4,7 @@ import * as Yup from "yup"
 import { differenceInYears } from "date-fns"
 import { useAppDispatch } from "store/hooks"
 import { register } from "store/redux/auth/authSlice"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { FormRightSideTemplate, Button, Input, InputCheckbox } from "components/index"
 import {
   SignupPageWrapper,
@@ -100,7 +100,7 @@ export default function Signup() {
         <SignupForm onSubmit={formik.handleSubmit}>
           <SignupHeader>Sign up</SignupHeader>
           <AlreadyHaveAnAccount>
-            Already have an account? <Login href="/auth/login">Login</Login>
+            Already have an account? <Link to="/auth/login">Login</Link>
           </AlreadyHaveAnAccount>
           <Input
             id="email"
@@ -183,7 +183,7 @@ export default function Signup() {
           <Agreement>
             *by creating an account I agree to the{" "}
             <TermsOfUse href="/info/termsofuse">terms of use</TermsOfUse> and{" "}
-            <PrivacyPolicy href="/info/privacypolicy">
+            <PrivacyPolicy to="/info/privacypolicy">
               privacy policy
             </PrivacyPolicy>
             <InputCheckbox
